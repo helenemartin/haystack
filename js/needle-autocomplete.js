@@ -1,3 +1,4 @@
+$(function(){
   var needles = [
     { value: 'needle', image: "assets/black.png" },
     { value: 'knitting needle', image: "assets/cream.png"},
@@ -18,4 +19,12 @@
     
     }
   });  
+  $( "#autocomplete" ).keyup(function() {
+    var inputValue = $('#autocomplete').val();
+    // console.log(inputValue);
+    if (inputValue.length === 0) {
+      $('#outputcontent').html('');
+    }
+  
+  });
 });
